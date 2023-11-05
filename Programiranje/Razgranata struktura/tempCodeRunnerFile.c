@@ -1,9 +1,7 @@
 #include<stdio.h>
-int main()
+void main()
 {
     int k;
-    printf("unesi broj\n");
     scanf("%d",&k);
     printf("%d\n",k);
-    return 0;
 }
