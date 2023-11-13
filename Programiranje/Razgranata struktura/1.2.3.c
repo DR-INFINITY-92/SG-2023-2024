@@ -8,12 +8,12 @@ int main ()
     scanf("%d",&n);
     if(n==0)
     {
-        printf("sa nulom se ne deli pogresan unos");
+        printf("sa nulom se ne deli pogresan unos\n");
         goto p;
     }
     else
     {
-        printf("reciprocna vrednost broja je %.4f",1.0/n);
+        printf("reciprocna vrednost broja je %.4f\n",1.0/n);
     }
     return 0;
 }
