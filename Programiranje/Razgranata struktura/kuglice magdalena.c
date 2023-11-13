@@ -34,7 +34,7 @@ int main()
         {
             pom=pom+c2;
         }
-    }</stdlib.h>
+    }
     printf("ukupan broj pomeraja kuglica je %d\n",pom);
     return 0;
 }
