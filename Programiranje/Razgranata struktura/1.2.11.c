@@ -25,7 +25,6 @@ int main ()
                     printf("najveca cifra je %d",s);
                 else
                     printf("najveca cifra je %d",h);
-
     }
     else
     {
