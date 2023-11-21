@@ -27,7 +27,7 @@ int main ()
             if(j<s)
                 n=s*100+j*10+d;
             else
-                n=d*100+s*10+d;
+                n=d*100+s*10+j;
          }
          else
          {
@@ -40,7 +40,7 @@ int main ()
     }
     else
     {
-        printf("niste uneli trocifreni broj unesi opet/n");
+        printf("niste uneli trocifreni broj unesi opet\n");
         goto p;
     }
     printf("broj nakon zamene cifara je %d\n",n);
