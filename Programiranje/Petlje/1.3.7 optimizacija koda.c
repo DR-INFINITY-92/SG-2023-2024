@@ -1,13 +1,14 @@
 int main()
 {
- int n,i;
+ int n,i,m;
  float x,s;
  printf("Unesi broj\n");
  scanf("%f",&x);
  printf("Unesi stepen broja n\n");
  scanf("%d",&n);
  s=1;
- for(i=0;i<abs(n);i++)
+ m=abs(n);
+ for(i=0;i<m;i++)
  {
     s=s*x;
  }
@@ -15,6 +16,6 @@ int main()
  {
    s=1.0/s;
  }
- printf("%f",s);
+ printf("%.3f",s);
     return 0;
 }    
