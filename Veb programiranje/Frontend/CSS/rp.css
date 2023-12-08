@@ -1,0 +1,25 @@
+/* Poglavlje3/25/index.css */
+
+div {
+  width: 300px;
+  height: 100px;
+}
+
+#plavi {
+  background-color: dodgerblue;
+}
+
+#crveni {
+  background-color: firebrick;
+}
+
+#zlatni {
+  background-color: goldenrod;
+}
+
+.pozicioniranje {
+  position: relative;
+  top: 50px;
+  left: 600px;
+  bottom: 100px;
+}

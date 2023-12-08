@@ -4,7 +4,7 @@
   border: 2px dashed green;
   padding: 50px;
   margin: 20px;
-  border-radius: 10px; 
+  border-radius: 10px;
   /* float: left; */
   /* display: none; */
 }
@@ -15,5 +15,6 @@
   padding: 50px;
   margin: 20px;
   border-radius: 10px;
+  visibility: hidden;
   /* float: left; */
 }
