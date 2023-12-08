@@ -1,0 +1,19 @@
+#div1 {
+  background-color: lightgrey;
+  width: 300px;
+  border: 2px dashed green;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 10px; 
+  /* float: left; */
+  /* display: none; */
+}
+#div2 {
+  background-color: rgb(190, 41, 41);
+  width: 300px;
+  border: 2px dashed green;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 10px;
+  /* float: left; */
+}
