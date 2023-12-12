@@ -9,10 +9,7 @@ int main()
     scanf("%d",&x);
     buc++;
     if(x==0)
-    {
-        
         break;
-    }
     else
     {
         if(x>0)
@@ -21,10 +18,7 @@ int main()
             p=p*x;
         }
         else
-        {
             b3++;
-        }
-         
     }
  }
  if(buc==1 && b2==0)
