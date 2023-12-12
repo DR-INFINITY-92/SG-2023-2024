@@ -2,8 +2,8 @@
 #include<stdlib.h>
 int main()
 {
- int i,n,bpz=0;
- float cena_artikla,minimalna_cena,trenutni_artikal,prethodni_artikal;
+ int i,n;
+ float cena_artikla,minimalna_cena_artikla,minimalna_cena,trenutna_cena_artikla,prethodna_cena_artikla;
  printf("unesi koliko imas aritkala\n");
  scanf("%d",&n);
  for(i=1;i<=n;i++)
@@ -12,15 +12,15 @@ int main()
     scanf("%f",&cena_artikla);
     if(i==1)
     {
-        minimalna_cena=cena_artikla;
-        prethodni_artikal=cena_artikla;
+        minimalna_cena_artikla=cena_artikla;
+        prethodna_cena_artikla=cena_artikla;
         continue;
     }
-    trenutni_artikal=cena_artikla;
-    if(trenutni_artikal<prethodni_artikal)
+    trenutna_cena_artikla=cena_artikla;
+    if(trenutna_cena_artikla<prethodna_cena_artikla)
     {
-         minimalna_cena=trenutni_artikal;
-         prethodni_artikal=trenutni_artikal;
+         minimalna_cena=trenutna_cena_artikla;
+         prethodna_cena_artikla=trenutna_cena_artikla;
     }
  }
  printf("minimalna cena artikla je  %f",minimalna_cena);
