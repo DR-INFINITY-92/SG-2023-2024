@@ -1,0 +1,14 @@
+.t1 {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: translate(50px, 100px);
+}
+.t2 {
+  width: 300px;
+  height: 100px;
+  background-color: tomato;
+  border: 1px solid black;
+  transform: translate(150px, 120px);
+}
