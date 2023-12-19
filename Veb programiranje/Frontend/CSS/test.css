@@ -1,0 +1,79 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04aa6d;
+}
+#hero {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url("123.jpg");
+
+  /* Set a specific height */
+  height: 600px;
+  width: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#col3 {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 40px);
+  background-color: orange;
+  margin: 10px;
+}
+#sc {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(2, 40px);
+  background-color: orange;
+  margin: 10px;
+}
+
+.div3 {
+  border: 1px solid black;
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.div2 {
+  border: 1px solid black;
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.pc {
+  background-color: tomato;
+}
+#pci {
+  width: 1000px;
+  height: 500px;
+}

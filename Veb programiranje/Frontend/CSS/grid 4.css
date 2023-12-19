@@ -1,0 +1,15 @@
+section {
+  display: grid;
+  grid-template-columns: 22% 78%;
+  background-color: orange;
+  margin: 10px;
+  padding: 7px;
+}
+
+div {
+  background-color: purple;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
