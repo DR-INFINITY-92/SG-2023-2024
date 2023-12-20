@@ -42,16 +42,18 @@ li a:hover:not(.active) {
 #col3 {
   display: grid;
   justify-content: space-around;
-  grid-template-columns: repeat(3, 40px);
+  grid-template-columns: repeat(3, 10px);
   background-color: orange;
-  margin: 10px;
+  align-content: center;
+  height: 100%;
 }
 #sc {
   display: grid;
   justify-content: space-around;
-  grid-template-columns: repeat(2, 40px);
+  grid-template-columns: repeat(2, 10px);
   background-color: orange;
-  margin: 10px;
+  margin: 5px;
+  height: 2000px;
 }
 
 .div3 {
@@ -61,6 +63,8 @@ li a:hover:not(.active) {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
+  height: 100%;
+  width: 500%;
 }
 .div2 {
   border: 1px solid black;
@@ -76,4 +80,12 @@ li a:hover:not(.active) {
 #pci {
   width: 1000px;
   height: 500px;
+}
+.imgs {
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
 }
