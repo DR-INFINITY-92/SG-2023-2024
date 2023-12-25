@@ -2,7 +2,7 @@
 #include<stdlib.h>
 int main() 
 {
-    int n,m=0,o=1,b=1,c;
+    int n,m=0,tc=1,b=1,c;
     printf("unesi broj n\n");
     scanf("%d",&n);
     while (n>0)
@@ -11,7 +11,7 @@ int main()
         if(b%2!=0)
         {
             m=m+c*o;
-            o=o*10;
+            tc=tc*10;
         }
         b++;
         n=n/10;
