@@ -2,24 +2,21 @@
 #include<stdlib.h>
 void zdravo()
 {
-    printf("zdravo svima\n");
+    printf("zdravo decoOo\n");
+    main();
+
 }
-void pozdravi_peru()
+void obim_kruga()
 {
-    printf("zdravo perooo\n");
-}
-float povrsina_kruga(float k)
-{
-    float Pi=3.14,P;
-    P=k*k*Pi;
-    return P;
-}
-int main()
-{
-    float r,O,P;
-    printf("unesi polupresnicnik kruga\n");
+    float Pi=3.14,Ok,r;
+    printf("unesi poluiprecnik kruga\n");
     scanf("%f",&r);
-    P=povrsina_kruga(r);
-    printf("povrsina kruga je %f \n",P);
+  
+    Ok=2*r*Pi;
+    printf("obim kruga je %.2f",Ok);
+}
+int  main()
+{
+    obim_kruga();
     return 0;
-}  
+}
