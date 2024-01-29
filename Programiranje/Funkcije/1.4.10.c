@@ -5,7 +5,7 @@ int broj_cifara(int k)
     int b=0;
     while(k!=0)
     {
-        b++
+        b++;
         k=k/10;
     }
     return b;
@@ -23,7 +23,7 @@ int suma_cifara(int k)
 float aritmeticka_sredina(float x)
 {
     float as;
-    as=suma_cifara(x)/broj_cifara(x);
+    as=1.0*suma_cifara(abs(x))/broj_cifara(abs(x));
     return as;
 }
 int main()
