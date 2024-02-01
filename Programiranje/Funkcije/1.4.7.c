@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
-float prebrojavanje(float m)
+int prebrojavanje(float m)
 {
     int br=0;
     float x;
