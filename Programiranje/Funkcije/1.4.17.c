@@ -7,7 +7,7 @@ int par_nepar(int m)
     m=m/10;
     while(m!=0)
     {
-        ct=m%10
+        ct=m%10;
         if(ct%2==cp%2)
             return 0;
         cp=ct;
