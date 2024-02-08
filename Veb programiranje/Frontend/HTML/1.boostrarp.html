@@ -13,7 +13,7 @@
   <body>
     <!-- NAV BAR  -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-      <div class="container-fluid">
+      <div class="container">
         <a class="navbar-brand" href="#"
           >FASTFOODHOUSE
           <img
@@ -48,7 +48,11 @@
     </nav>
     <!-- <CARASEL> -->
     <!-- Carousel -->
-    <div id="demo" class="container carousel slide" data-bs-ride="carousel">
+    <div
+      id="demo"
+      class="container-fluid carousel slide"
+      data-bs-ride="carousel"
+    >
       <!-- Indicators/dots -->
       <div class="carousel-indicators">
         <button
@@ -129,56 +133,57 @@
     </div>
 
     <!-- nas meni -->
-    <div class="container mt-3">
-      <h1>Large Grid</h1>
+    <div class="container-fluid mt-3">
+      <h1>Veliki Grid</h1>
       <p>
-        The following example will result in a 25%/75% split on small devices, a
-        50%/50% split on medium devices, and a 33%/66% split on large, xlarge
-        and xxlarge devices. On extra small devices, it will automatically stack
-        (100%).
+        Sledeći primer rezultiraće u raspodeli od 25%/75% na malim uređajima,
+        50%/50% na srednjim uređajima, i 33%/66% na velikim, vrlo velikim i
+        izuzetno velikim uređajima. Na ekstra malim uređajima, automatski će se
+        složiti (100%).
       </p>
-      <p>Resize the browser window to see the effect.</p>
-      <div class="container-fluid gx-3">
-        <div class="row ml-2 mr-2">
-          <div
-            class="p-4 col-sm-3 col-md-6 col-lg-4 ml-2 mr-2 bg-primary text-white"
-          >
-            <h2>Card Image Overlay</h2>
-            <p>
-              Turn an image into a card background and use .card-img-overlay to
-              overlay the card's text:
-            </p>
-            <div class="card img-fluid" style="width: 500px">
-              <img
-                class="card-img-top"
-                src="carasel1.jpg"
-                alt="Card image"
-                style="width: 100%"
-              />
-              <div class="card-img-overlay">
-                <h4 class="card-title">John Doe</h4>
-                <p class="card-text">
-                  Some example text some example text. Some example text some
-                  example text. Some example text some example text. Some
-                  example text some example text.
-                </p>
-                <a href="#" class="btn btn-primary">See Profile</a>
+      <p>Promenite veličinu prozora pregledača da biste videli efekat.</p>
+      <div class="row ml-2 mr-2">
+        <div class="col-12">
+          <div class="row justify-content-center">
+            <div
+              class="col-sm-3 col-md-6 col-lg-3 mb-3 mx-4 bg-primary text-white"
+            >
+              <h2>Prekrivanje slike kartice</h2>
+              <p>
+                Pretvorite sliku u pozadinu kartice i koristite
+                .card-img-overlay da biste prekrili tekst kartice:
+              </p>
+              <div class="card img-fluid" style="width: 450px">
+                <img
+                  class="card-img-top"
+                  src="carasel1.jpg"
+                  alt="Slika kartice"
+                  style="width: 100%"
+                />
+                <div class="card-img-overlay">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">
+                    Neki primer teksta neki primer teksta. Neki primer teksta
+                    neki primer teksta. Neki primer teksta neki primer teksta.
+                    Neki primer teksta neki primer teksta.
+                  </p>
+                  <a href="#" class="btn btn-primary">Vidi profil</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="ml-2 mr-2 col-md-6 col-lg-4 bg-dark text-white">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
-          </div>
-          <div
-            class="ml-2 mr-2 col-sm-9 col-md-6 col-lg-4 bg-primary text-white"
-          >
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            <div class="col-md-6 col-lg-3 mb-3 mx-4 bg-dark text-white">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </div>
+            <div
+              class="col-sm-9 col-md-6 col-lg-3 mb-3 mx-4 bg-primary text-white"
+            >
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis e
+            </div>
           </div>
         </div>
       </div>
