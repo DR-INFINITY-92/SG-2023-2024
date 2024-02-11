@@ -1,238 +1,253 @@
 # Kreiranje HTML tabele
-index = raspored_provera.to_html(classes='table table-bordered table-responsive-sm text-center', index=True)
-
+index = raspored_provera.to_html(classes='table table-bordered table-responsive-sm text-center purple-border purple-text',index=True)
 index = f"""
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <title>Распоред провера</title>
-
-   <style>
-    th, td {{
-      text-align: center;
-      color: white;
-    }}
-    th, td {{
-      color: white;
-    }}
-     .text-right {{
-      text-align: right;
-      color:white;
-    }}
-     body {{
-      background-image: url('https://i.gifer.com/9viJ.gif');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color:white;
-    }}
-    .accordion-body {{
-      background-color: transparent !important;
-    }}
-    .accordion-button {{
-      color: blue;
-       text-align: center; 
-      
-    }}
-
-     .purple-text {{
-      color: purple; /* Postavljanje ljubičaste boje teksta */
-    }}
-    .purple-border {{
-      border-color: purple !important; /* Postavljanje ljubičaste boje border-a */
-    }}
-     /* Stilizovanje iframe za responsivnost */
-    .embed-responsive-container {{
-      position: relative;
-      overflow: hidden;
-    }}
-
-    .embed-responsive-container iframe {{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }}
-
-    /* Flex centriranje */
-    .center {{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }}
-
-
-    .iframe-wrapper {{
-        position: relative;
-        padding-top: 56.25%; /* 16:9 aspect ratio */
-    }}
-    .iframe-wrapper iframe {{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }}
-  </style>
-</head>
-<body>
-
-<div class="container-fluid">
-   <h2 class="text-center mb-4 mt-5 bg-primary"><b>Распоред провера у другом пологудишту за одељење 1/3 за школску 2023/24. годину</b></h2>
-      <div class="table-responsive">
-       {index}
-     </div>
-    <div class="container mt-3">
-      <div class="row">
-        <div class="col text-right ms-auto">У Ћуприји,&nbsp{trenutni_datum}</div>
-      </div> 
-        <div class="row">
-          <div class="col text-right ms-auto"><p>Разредни старешина,<a href="https://github.com/DR-INFINITY-92" target="_blank">&nbspDR-<span>&#8734;</span>
-          </a>-Професор физике и информатике</p>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <title>Распоред провера</title>
+    
+       <style>
+        th, td {{
+          text-align: center;
+          color: white;
+        }}
+        th, td {{
+          color: white;
+        }}
+         .text-right {{
+          text-align: right;
+          color:white;
+        }}
+         body {{
+          background-image: url('https://i.gifer.com/9viJ.gif');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          color:white;
+        }}
+        .accordion-body {{
+          background-color: transparent !important;
+        }}
+        .accordion-button {{
+          color: blue;
+           text-align: center; 
+          
+        }}
+    
+         .purple-text {{
+          color: purple; /* Postavljanje ljubičaste boje teksta */
+        }}
+        .purple-border {{
+          border-color: purple !important; /* Postavljanje ljubičaste boje border-a */
+        }}
+         /* Stilizovanje iframe za responsivnost */
+        .embed-responsive-container {{
+          position: relative;
+          overflow: hidden;
+        }}
+    
+        .embed-responsive-container iframe {{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }}
+    
+        /* Flex centriranje */
+        .center {{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }}
+    
+    
+        .iframe-wrapper {{
+            position: relative;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+        }}
+        .iframe-wrapper iframe {{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }}
+      </style>
+    </head>
+    <body>
+    
+    <div class="container-fluid">
+    <h1 class="text-center bg-danger ">Важна Oбавештења</h1>
+    
+    <div class="accordion" id="accordionExample3">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading3">
+          <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+            <b style="color: purple;">Распоред провера у другом пологудишту за одељење 1/3 за школску 2023/24. годину</b>
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample3">
+          <div class="accordion-body">
+            <div class="container-fluid">
+              <h2 class="text-center mb-4 mt-5 bg-primary text-white"><b>Распоред провера у другом пологудишту за одељење 1/3 за школску 2023/24. годину</b></h2>
+              <div class="table-responsive">
+                <table class="table table-bordered table-responsive-sm">
+                  {index}
+                </table>
+              </div>
+              <div class="container mt-3">
+                <div class="row">
+                  <div class="col text-right ms-auto" style="color: purple;">У Ћуприји,&nbsp{trenutni_datum}</div>
+                </div> 
+                <div class="row">
+                  <div class="col text-right ms-auto" style="color: purple;">
+                    <p>Разредни старешина,<a href="https://github.com/DR-INFINITY-92" target="_blank">&nbspDR-<span>&#8734;</span>
+                    </a>-Професор физике и информатике</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="container-fluid">
-<h1 class="text-center bg-danger ">Важна Oбавештења</h1>
+    
+    
+    <br>
 
-
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h1 class="accordion-header" id="headingOne">
-      <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><b>
-        Тест из наставне области осцилације за одељење 3-4 одржаће се у понедељак 12.02.2024.
-      <b></button>
-    </h1>
-    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <h2 class="bg-primary text-white text-center">Тест из наставне области осцилације за одељење 3-4 одржаће се у понедељак 12.02.2024.</h2>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h1 class="accordion-header" id="headingOne">
+          <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><b>
+            Тест из наставне области осцилације за одељење 3-4 одржаће се у понедељак 12.02.2024.
+          <b></button>
+        </h1>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <h2 class="bg-danger text-white text-center">Тест из наставне области осцилације за одељење 3-4 одржаће се у понедељак 12.02.2024.</h2>
+            <div class="container-fluid">
+      <div class="table-responsive">
+        <h2 class="purple-text purple-border mb-4 mt-5 bg-info text-center"><b>  На тесту ће бити теорија и задаци, као што смо се раније договорили у школи.<br>
+              
+          Досада рађене лекције имате у вашим свескама, књигама, а за оне који немају или су пропустили нешто, лекције можете пронаћи и онлајн  на следећим линковима који се налазе у табели испод.<b></h2>
+        <table class="table table-bordered purple-border">
+          <thead>
+            <tr>
+              <th class="purple-text">Редни број </th>
+              <th class="purple-text">Назив лекције</th>
+              <th class="purple-text">Линк</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="purple-text">1</td>
+              <td class="purple-text">Механички хармонијски осцилатор</td>
+              <td class="purple-text"><a href="https://fizis.rs/%d0%b3%d0%b8%d0%bc%d0%bd%d0%b0%d0%b7%d0%b8%d1%98%d0%b0/iii-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b4/harmonijske-oscilacije/mehanicki-harmonijski-oscilator/" target="_blank">Линк</a></td>
+            </tr>
+            <tr>
+              <td class="purple-text">2</td>
+              <td class="purple-text">Енергија хармонијског осцилатора</td>
+              <td class="purple-text"><a href="https://fizis.rs/%d0%b3%d0%b8%d0%bc%d0%bd%d0%b0%d0%b7%d0%b8%d1%98%d0%b0/iii-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b4/harmonijske-oscilacije/energija-harmonijskog-oscilatora/" target="_blank">Линк</a></td>
+            </tr>
+            <tr>
+              <td class="purple-text">3</td>
+              <td class="purple-text">Математичко клатно</td>
+              <td class="purple-text"><a href="https://fizis.rs/%d0%b3%d0%b8%d0%bc%d0%bd%d0%b0%d0%b7%d0%b8%d1%98%d0%b0/iii-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b4/harmonijske-oscilacije/matematicko-klatno/" target="_blank">Линк</a></td>
+            </tr>
+            <tr>
+              <td class="purple-text">4</td>
+              <td class="purple-text">Физичко клатно</td>
+              <td class="purple-text"><a href="https://fizis.rs/%d0%b3%d0%b8%d0%bc%d0%bd%d0%b0%d0%b7%d0%b8%d1%98%d0%b0/iii-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b4/harmonijske-oscilacije/fizicko-klatno/" target="_blank">Линк</a></td>
+            </tr>
+            <tr>
+              <td class="purple-text">5</td>
+              <td class="purple-text">Пригушене и принудне осцилације</td>
+              <td class="purple-text"><a href="https://fizis.rs/%d0%b3%d0%b8%d0%bc%d0%bd%d0%b0%d0%b7%d0%b8%d1%98%d0%b0/iii-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b4/harmonijske-oscilacije/prigusene-i-prinudne-oscilacije/" target="_blank">Линк</a></td>
+            </tr>
+          </tbody>
+        </table>
         <div class="container-fluid">
-  <div class="table-responsive">
-    <h2 class="purple-text purple-border mb-4 mt-5 bg-info text-center"><b>  На тесту ће бити теорија и задаци, као што смо се раније договорили у школи.<br>
-          
-      Досада рађене лекције имате у вашим свескама, књигама, а за оне који немају или су пропустили нешто, лекције можете пронаћи и онлајн  на следећим линковима који се налазе у табели испод.<b></h2>
-    <table class="table table-bordered purple-border">
-      <thead>
-        <tr>
-          <th class="purple-text">Редни број </th>
-          <th class="purple-text">Назив лекције</th>
-          <th class="purple-text">Линк</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="purple-text">1</td>
-          <td class="purple-text">Механички хармонијски осцилатор</td>
-          <td class="purple-text"><a href="https://fizis.rs/%d0%b3%d0%b8%d0%bc%d0%bd%d0%b0%d0%b7%d0%b8%d1%98%d0%b0/iii-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b4/harmonijske-oscilacije/mehanicki-harmonijski-oscilator/" target="_blank">Линк</a></td>
-        </tr>
-        <tr>
-          <td class="purple-text">2</td>
-          <td class="purple-text">Енергија хармонијског осцилатора</td>
-          <td class="purple-text"><a href="https://fizis.rs/%d0%b3%d0%b8%d0%bc%d0%bd%d0%b0%d0%b7%d0%b8%d1%98%d0%b0/iii-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b4/harmonijske-oscilacije/energija-harmonijskog-oscilatora/" target="_blank">Линк</a></td>
-        </tr>
-        <tr>
-          <td class="purple-text">3</td>
-          <td class="purple-text">Математичко клатно</td>
-          <td class="purple-text"><a href="https://fizis.rs/%d0%b3%d0%b8%d0%bc%d0%bd%d0%b0%d0%b7%d0%b8%d1%98%d0%b0/iii-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b4/harmonijske-oscilacije/matematicko-klatno/" target="_blank">Линк</a></td>
-        </tr>
-        <tr>
-          <td class="purple-text">4</td>
-          <td class="purple-text">Физичко клатно</td>
-          <td class="purple-text"><a href="https://fizis.rs/%d0%b3%d0%b8%d0%bc%d0%bd%d0%b0%d0%b7%d0%b8%d1%98%d0%b0/iii-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b4/harmonijske-oscilacije/fizicko-klatno/" target="_blank">Линк</a></td>
-        </tr>
-        <tr>
-          <td class="purple-text">5</td>
-          <td class="purple-text">Пригушене и принудне осцилације</td>
-          <td class="purple-text"><a href="https://fizis.rs/%d0%b3%d0%b8%d0%bc%d0%bd%d0%b0%d0%b7%d0%b8%d1%98%d0%b0/iii-%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b4/harmonijske-oscilacije/prigusene-i-prinudne-oscilacije/" target="_blank">Линк</a></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="container-fluid">
-        <h2 class="purple-text bg-info text-center">
-          <b>Додатни материјали за учење дати могу се наћи у следећој YouTube playlist-и</b>
-      </h2>
-
-      <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="iframe-wrapper embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLXtJwIDHx8W4HhTOvNQfOQTAwc3EVBJ3M" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="container-fluid">
-      <h2 class="purple-text bg-info text-center">
-        <b>Симулације - Phet Colorado </b>
-    </h2>
-    <br>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="iframe-wrapper embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_sr.html" allowfullscreen></iframe>
+            <h2 class="purple-text bg-info text-center">
+              <b>Додатни материјали за учење дати могу се наћи у следећој YouTube playlist-и</b>
+          </h2>
+    
+          <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="iframe-wrapper embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLXtJwIDHx8W4HhTOvNQfOQTAwc3EVBJ3M" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
         <br>
+        <div class="container-fluid">
+          <h2 class="purple-text bg-info text-center">
+            <b>Симулације - Phet Colorado </b>
+        </h2>
+        <br>
         <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="iframe-wrapper embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://phet.colorado.edu/sims/html/masses-and-springs/latest/masses-and-springs_sr.html"
-                    allowfullscreen></iframe>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="iframe-wrapper embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_sr.html" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
+            <br>
+            <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="iframe-wrapper embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://phet.colorado.edu/sims/html/masses-and-springs/latest/masses-and-springs_sr.html"
+                        allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <h2 class="purple-text purple-border mb-4 mt-5 bg-info text-center"><b>
+              Задаци који долазе у обзир су они који су рађени на часу и њихове варијације на тему.
+              <br> Поздрав, проф. Д.Р.♾️</h2>
+    
         </div>
-
-
-    </div>
-    </div>
-    </div>
-     </div>
-  </div>
-  </div>
-  </div>
-</div>
-</div>
-</div>
-<br>
-<div class="accordion" id="accordionExample2">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-        <b>Тест из наставне области осцилације за одељење 3-3
-      </b></button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
-      <div class="accordion-body">
-        <h2 class="bg-primary text-white">Тест из наставне области осцилације за одељење 3-3 одржаће се у понедељак 01.03.2024.</h2>
+        </div>
+        </div>
+         </div>
+      </div>
+      </div>
       </div>
     </div>
-  </div>
-</div>
-<br>
-
-<!-- Dodavanje Bootstrap JS i Popper.js skripti -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-</body>
-</html>
-
-"""
-
-# Snimanje HTML tabele u datoteku ili štampanje
+    </div>
+    </div>
+    <br>
+    <div class="accordion" id="accordionExample2">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <b>Тест из наставне области осцилације за одељење 3-3
+          </b></button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
+          <div class="accordion-body">
+            <h2 class="bg-primary text-white">Тест из наставне области осцилације за одељење 3-3 одржаће се у понедељак 01.03.2024.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+    <!-- Dodavanje Bootstrap JS i Popper.js skripti -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+    </body>
+    </html>
+    
+    """
+    
+    # Snimanje HTML tabele u datoteku ili štampanje
 with open('index.html', 'w') as f:
-    f.write(index)
-
-
-
-
-
+  f.write(index)
