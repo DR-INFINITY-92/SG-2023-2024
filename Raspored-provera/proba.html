@@ -64,6 +64,19 @@ index = f"""
       justify-content: center;
       align-items: center;
     }}
+
+
+    .iframe-wrapper {{
+        position: relative;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+    }}
+    .iframe-wrapper iframe {{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }}
   </style>
 </head>
 <body>
@@ -100,7 +113,7 @@ index = f"""
         <h2 class="bg-primary text-white text-center">Тест из наставне области осцилације за одељење 3-4 одржаће се у понедељак 12.02.2024.</h2>
         <div class="container-fluid">
   <div class="table-responsive">
-    <h2 class="purple-text purple-border mb-4 mt-5 bg-info"><b>  На тесту ће бити теорија и задаци, као што смо се раније договорили у школи.<br>
+    <h2 class="purple-text purple-border mb-4 mt-5 bg-info text-center"><b>  На тесту ће бити теорија и задаци, као што смо се раније договорили у школи.<br>
           
       Досада рађене лекције имате у вашим свескама, књигама, а за оне који немају или су пропустили нешто, лекције можете пронаћи и онлајн  на следећим линковима који се налазе у табели испод.<b></h2>
     <table class="table table-bordered purple-border">
@@ -140,25 +153,54 @@ index = f"""
       </tbody>
     </table>
     <div class="container-fluid">
-        <h2 class="purple-text bg-info text-start">
+        <h2 class="purple-text bg-info text-center">
           <b>Додатни материјали за учење дати могу се наћи у следећој YouTube playlist-и</b>
       </h2>
 
-      <div class="embed-responsive embed-responsive-16by9">
-      
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLXtJwIDHx8W4HhTOvNQfOQTAwc3EVBJ3M" allowfullscreen></iframe>
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="iframe-wrapper embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLXtJwIDHx8W4HhTOvNQfOQTAwc3EVBJ3M" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid">
+      <h2 class="purple-text bg-info text-center">
+        <b>Симулације - Phet Colorado </b>
+    </h2>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="iframe-wrapper embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_sr.html" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
         <br>
-        <iframe  class="embed-responsive-item"  src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_sr.html"
-        width="800"
-        height="600"
-        allowfullscreen>
-        </iframe>
-      </div>
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="iframe-wrapper embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://phet.colorado.edu/sims/html/masses-and-springs/latest/masses-and-springs_sr.html"
+                    allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     </div>
+    </div>
+     </div>
   </div>
   </div>
   </div>
+</div>
+
 </div>
 <br>
 <div class="accordion" id="accordionExample2">
