@@ -41,6 +41,28 @@
     .purple-border {
       border-color: purple !important; /* Postavljanje ljubičaste boje border-a */
     }
+     /* Stilizovanje iframe za responsivnost */
+    .embed-responsive-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%; /* Aspect ratio 16:9 */
+    }
+
+    .embed-responsive-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Flex centriranje */
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Visina 100% prozora */
+    }
   </style>
 </head>
 <body>
@@ -201,11 +223,17 @@
         </tr>
       </tbody>
     </table>
-        <h2>
+    <div class="container">
+    <div class="center"> <!-- Flex centrirani kontejner -->
+      <div class="embed-responsive embed-responsive-16by9">
+         <h2>
           
             <b>YouTube плејлиста</b>
         </h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXtJwIDHx8W4HhTOvNQfOQTAwc3EVBJ3M" frameborder="0" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLXtJwIDHx8W4HhTOvNQfOQTAwc3EVBJ3M" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
           </div>
       </div>
     </div>
