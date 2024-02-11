@@ -1,4 +1,7 @@
+# Kreiranje HTML tabele
+index = raspored_provera.to_html(classes='table table-bordered table-responsive-sm text-center', index=True)
 
+index = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,39 +11,59 @@
   <title>Распоред провера</title>
 
    <style>
-    th, td {
+    th, td {{
       text-align: center;
       color: white;
-    }
-    th, td {
+    }}
+    th, td {{
       color: white;
-    }
-     .text-right {
+    }}
+     .text-right {{
       text-align: right;
       color:white;
-    }
-     body {
+    }}
+     body {{
       background-image: url('https://i.gifer.com/9viJ.gif');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
       color:white;
-    }
-    .accordion-body {
+    }}
+    .accordion-body {{
       background-color: transparent !important;
-    }
-    .accordion-button {
+    }}
+    .accordion-button {{
       color: blue;
        text-align: center; 
       
-    }
+    }}
 
-     .purple-text {
+     .purple-text {{
       color: purple; /* Postavljanje ljubičaste boje teksta */
-    }
-    .purple-border {
+    }}
+    .purple-border {{
       border-color: purple !important; /* Postavljanje ljubičaste boje border-a */
-    }
+    }}
+     /* Stilizovanje iframe za responsivnost */
+    .embed-responsive-container {{
+      position: relative;
+      overflow: hidden;
+    }}
+
+    .embed-responsive-container iframe {{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }}
+
+    /* Flex centriranje */
+    .center {{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }}
   </style>
 </head>
 <body>
@@ -48,97 +71,11 @@
 <div class="container-fluid">
   <h2 class="text-center mb-4 mt-5 bg-primary"><b>Распоред провера у другом пологудишту за одељење 1/3 за школску 2023/24. годину</b></h2>
   <div class="table-responsive">
-    <table border="1" class="dataframe table table-bordered table-responsive-sm text-center">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Редни број провере</th>
-      <th>Предмет</th>
-      <th>Група</th>
-      <th>Врста</th>
-      <th>Датум</th>
-      <th>Садржај рада</th>
-      <th>Предметни професор</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>Хемија</td>
-      <td>Цело одељење</td>
-      <td>писмена вежба</td>
-      <td>12. 2. 2024.</td>
-      <td>Дисперзни системи</td>
-      <td>Оља Радивојевић</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Рачунарски системи</td>
-      <td>Цело одељење</td>
-      <td>контролни задатак</td>
-      <td>14. 2. 2024.</td>
-      <td>Логичке функције</td>
-      <td>Николина Станојевић</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Математика</td>
-      <td>Цело одељење</td>
-      <td>писмена вежба</td>
-      <td>20. 2. 2024.</td>
-      <td>Примена подударности</td>
-      <td>Милица Цветковић</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Физика</td>
-      <td>Цело одељење</td>
-      <td>контролни задатак</td>
-      <td>23. 2. 2024.</td>
-      <td>Кретање са убрзањем Г.</td>
-      <td>Далибор Рајковић</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Програмирање</td>
-      <td>Програмирање вежбе - 1. група</td>
-      <td>контролни задатак</td>
-      <td>26. 2. 2024.</td>
-      <td>Функције.</td>
-      <td>Далибор Рајковић</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Програмирање</td>
-      <td>Програмирање вежбе - 2. група</td>
-      <td>контролни задатак</td>
-      <td>27. 2. 2024.</td>
-      <td>Функције.</td>
-      <td>Далибор Рајковић</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Енглески језик</td>
-      <td>Цело одељење</td>
-      <td>тестирање</td>
-      <td>1. 3. 2024.</td>
-      <td>Unit 3 - vocabulary and grammar</td>
-      <td>Јована Михајловић</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Српски језик и књижевност</td>
-      <td>Цело одељење</td>
-      <td>писмени задатак</td>
-      <td>8. 3. 2024.</td>
-      <td>Хеленска књижевност</td>
-      <td>Марија Илић</td>
-    </tr>
-  </tbody>
-</table>
+    {index}
   </div>
   <div class="container mt-3">
   <div class="row">
-    <div class="col text-right ms-auto">У Ћуприји,&nbsp09.02.2024.</div>
+    <div class="col text-right ms-auto">У Ћуприји,&nbsp{trenutni_datum}</div>
   </div>
   <div class="row">
     <div class="col text-right ms-auto"><p>Разредни старешина,<a href="https://github.com/DR-INFINITY-92" target="_blank">&nbspDR-<span>&#8734;</span>
@@ -147,8 +84,7 @@
   </div>
 </div>
 </div>
-
-<h1 class="text-center bg-danger ">Важна OOOбавештења</h1>
+<h1 class="text-center bg-danger ">Важна Oбавештења</h1>
 
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
@@ -159,12 +95,12 @@
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <h2 class="bg-primary text-white">Тест из наставне области осцилације за одељење 3-4 одржаће се у понедељак 12.02.2024.</h2>
-
+        <h2 class="bg-primary text-white text-center">Тест из наставне области осцилације за одељење 3-4 одржаће се у понедељак 12.02.2024.</h2>
         <div class="container-fluid">
-  <h2 class="text-center mb-4 mt-5">fdfdfdf</h2>
   <div class="table-responsive">
-    <h2 class="text-center purple-text purple-border mb-4 mt-5">Табела са лекцијама и линковима</h2>
+    <h2 class="purple-text purple-border mb-4 mt-5 bg-info"><b>  На тесту ће бити теорија и задаци, као што смо се раније договорили у школи.<br>
+          
+      Досада рађене лекције имате у вашим свескама, књигама, а за оне који немају или су пропустили нешто, лекције можете пронаћи и онлајн  на следећим линковима који се налазе у табели испод.<b></h2>
   <div class="table-responsive">
     <table class="table table-bordered purple-border">
       <thead>
@@ -202,11 +138,23 @@
         </tr>
       </tbody>
     </table>
-        <h2>
+    <div class="container">
+    <div class="center"> <!-- Flex centrirani kontejner -->
+      <div class="embed-responsive ">
+        <h2 class="purple-text bg-info text-start">
           
-            <b>YouTube плејлиста</b>
+            <b>Додатни материјали за учење дати могу се наћи у следећој YouTube playlist-и</b>
         </h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXtJwIDHx8W4HhTOvNQfOQTAwc3EVBJ3M" frameborder="0" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLXtJwIDHx8W4HhTOvNQfOQTAwc3EVBJ3M" allowfullscreen></iframe>
+
+        <iframe src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_sr.html"
+        width="800"
+        height="600"
+        allowfullscreen>
+</iframe>
+      </div>
+    </div>
+  </div>
           </div>
       </div>
     </div>
@@ -215,9 +163,6 @@
 </div>
 
       </div>
-    </div>
-  </div>
-</div>
 <br>
 <div class="accordion" id="accordionExample2">
   <div class="accordion-item">
@@ -233,6 +178,7 @@
     </div>
   </div>
 </div>
+<br>
 
 <!-- Dodavanje Bootstrap JS i Popper.js skripti -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -240,3 +186,9 @@
 
 </body>
 </html>
+
+"""
+
+# Snimanje HTML tabele u datoteku ili štampanje
+with open('index.html', 'w') as f:
+    f.write(index)
