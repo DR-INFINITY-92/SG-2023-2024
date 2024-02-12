@@ -20,7 +20,7 @@ int suma_cifara(int k)
     }
     return s;
 }
-float aritmeticka_sredina(float x)
+float aritmeticka_sredina(int x)
 {
     float as;
     as=1.0*suma_cifara(abs(x))/broj_cifara(abs(x));
