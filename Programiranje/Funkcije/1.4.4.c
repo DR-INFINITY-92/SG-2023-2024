@@ -9,7 +9,7 @@ float stepen(float k, int m)
     for(i=0;i<n;i++)   
         s=s*k;   /*i=0 s=2 i=1 s=4 i=2 s=8*/
     if(m<0)
-        return 1/s;
+        return 1.0/s;
     else    
         return s;
 }
