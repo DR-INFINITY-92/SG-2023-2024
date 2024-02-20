@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<stdlib.h>
+#include<stdlib.h> 
 float redna_veza(float R1, float R2)
 {
     return R1+R2;
