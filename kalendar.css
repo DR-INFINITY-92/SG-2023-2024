@@ -1,0 +1,26 @@
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 kolona za dane u nedelji */
+  grid-gap: 5px;
+}
+
+.day {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.empty {
+  background-color: #ccc; /* Boja pozadine za prazne dane */
+  color: #ccc; /* Boja teksta za prazne dane */
+}
+
+.tooltip {
+  position: absolute;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 999;
+}
