@@ -13,7 +13,7 @@ float ekvivalentna_otpornost(float R1, float R2)
     float Re;
     char c;
     p:
-    printf("unesi R ako zelis da racunas rednu vezu, a P za paralelnu\n");
+    printf("unesi R ako pzelis da racunas rednu vezu, a P za paralelnu\n");
     scanf(" %c",&c);
     if(c=='R')
         Re=redna_veza(R1,R2);
