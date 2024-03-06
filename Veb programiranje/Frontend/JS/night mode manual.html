@@ -7,11 +7,18 @@
   </head>
   <body>
     <p>Click the button to display the date.</p>
-    <button onclick="displayDate()">The time is?</button>
+    <button onclick="darkMode()">The time is?</button>
     <script>
-      function displayDate() {
-        const D = new Date();
-        document.getElementById("demo").innerHTML = D.getHours();
+      var br_kllikova = 0;
+      function darkMode() {
+        br_kllikova++;
+        if (br_kllikova % 2 == 1) {
+          document.body.style.backgroundColor = "rgb(41, 41, 61)";
+          document.body.style.color = "white";
+        } else {
+          document.body.style.backgroundColor = "white";
+          document.body.style.color = "black";
+        }
       }
     </script>
     <p id="demo">bla bla</p>
