@@ -1,70 +1,48 @@
 #include<stdio.h>
 #include<stdlib.h>
-void unos_niza(int n,int a[n])
+void unos_vremena_putovanja_autobusa(int n,int a[n])
 {
     int i;
     for(i=0;i<n;i++)
     {
-        printf(" a[%d] = ",i);
+        printf(" unesi vreme putovanja za %d. autobus ",i+1);
         scanf("%d",&a[i]);
     }
 }
 
-void ispis_niza(int n,int a[n])
+void ispis_vremena_putovanja_autobusa(int n,int a[n])
 {
     int i;
     for(i=0;i<n;i++)
     {
-         printf(" a[%d]=%d ",i,a[i]);
+         printf(" %d ",a[i]);
     }
 }
-int broj_elemenata_niza()
+int broj_autobusa()
 {
     int n;
-    printf("unesi koliko niz ima elemenata\n");
+    printf("unesi koliko imamo autobusa\n");
     scanf("%d",&n);
     return n;
 }
-int broj_cifara(int k)
+void kasnjenje_autobusa(int n,int a[n],int m,int k,int t)
 {
-    int br=0;
-    while(k!=0)
-    {
-        k=k/10;
-        br++;
-    }
-    return br;
-}
-void napravi_nizove(int n, int k, int a[n],int b[n])
-{
-    while(k!=0)
-    {
-        a[n-1]=k%10;
-        b[n-1]=k%10;
-        n--;
-        k=k/10;
-    }
-}
-void pojavljivanje_cifre(int n,int k,int a[n],int b[n])
-{
-    int i,j,br=0;
-    for(i=0;i<n;i++)
-    {
-        for(j=0;j<n;j++)
-          if(a[i]==b[j])
-            br++;
-        printf("\nu broju %d cifra %d se pojavljuje %d puta\n",k,a[i],br);
-        br=0;
-    }
+    int i;
+    for(i=m-1;i<=k-1;i++)
+        a[i]=a[i]+t;
 }
 int main()
 {
-    int k,n;
-    printf("unesi celi broj");
-    scanf("%d",&k);
-    n= broj_cifara(k);
-    int a[n],b[n];
-    napravi_nizove(n,k,a,b);
-    pojavljivanje_cifre(n,k,a,b);
+    int n,m,k,t;
+    n=broj_autobusa();
+    int a[n]; /*u ovom nizu cuvam vremena putovanja za autobuse*/
+    unos_vremena_putovanja_autobusa(n,a);
+    printf("unesi od koje do koje linije je kasnjenje i unesi kasnjenje u minutima\n");
+    scanf("%d%d%d",&m,&k,&t);
+    printf("vremena pre kasnjenja\n");
+    ispis_vremena_putovanja_autobusa(n,a);
+    kasnjenje_autobusa(n,a,m,k,t);
+    printf("\n vremena nakon kasnjenje\n");
+    ispis_vremena_putovanja_autobusa(n,a);
     return 0;
 }
