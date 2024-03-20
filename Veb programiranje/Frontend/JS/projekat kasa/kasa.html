@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jednostavan Kalkulator</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="kasa.css" />
+  </head>
+  <body class="bg-dark">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row bg-dark">
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img src="5000.jpg" alt="Novčanica 1" class="novcanica" />
+            </div>
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img src="50.jpg" alt="Novčanica 2" class="novcanica" />
+            </div>
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img src="2000.jpg" alt="Novčanica 3" class="novcanica" />
+            </div>
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img src="20.jpg" alt="Novčanica 4" class="novcanica" />
+            </div>
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img src="1000.jpg" alt="Novčanica 5" class="novcanica" />
+            </div>
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img src="10.jpg" alt="Novčanica 6" class="novcanica" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="calculator">
+            <div class="output" id="output">0</div>
+            <button class="btn btn-primary" onclick="appendNumber('7')">
+              7
+            </button>
+            <button class="btn btn-primary" onclick="appendNumber('8')">
+              8
+            </button>
+            <button class="btn btn-primary" onclick="appendNumber('9')">
+              9
+            </button>
+            <button class="btn btn-warning" onclick="appendOperator('+')">
+              +</button
+            ><br />
+            <button class="btn btn-primary" onclick="appendNumber('4')">
+              4
+            </button>
+            <button class="btn btn-primary" onclick="appendNumber('5')">
+              5
+            </button>
+            <button class="btn btn-primary" onclick="appendNumber('6')">
+              6
+            </button>
+            <button class="btn btn-warning" onclick="appendOperator('-')">
+              -</button
+            ><br />
+            <button class="btn btn-primary" onclick="appendNumber('1')">
+              1
+            </button>
+            <button class="btn btn-primary" onclick="appendNumber('2')">
+              2
+            </button>
+            <button class="btn btn-primary" onclick="appendNumber('3')">
+              3
+            </button>
+            <button class="btn btn-warning" onclick="appendOperator('*')">
+              *</button
+            ><br />
+            <button class="btn btn-secondary" onclick="clearOutput()">C</button>
+            <button class="btn btn-primary" onclick="appendNumber('0')">
+              0
+            </button>
+            <button class="btn btn-warning" onclick="calculate()">=</button>
+            <button class="btn btn-warning" onclick="appendOperator('/')">
+              /
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row bg-dark">
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img src="500.jpg" alt="Novčanica 7" class="novcanica" />
+            </div>
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img
+                class="smanjiparu"
+                src="5.png"
+                alt="Novčanica 8"
+                class="novcanica"
+              />
+            </div>
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img src="200.jpg" alt="Novčanica 9" class="novcanica" />
+            </div>
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img
+                class="smanjiparu"
+                src="2.png"
+                alt="Novčanica 10"
+                class="novcanica"
+              />
+            </div>
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img src="100.jpg" alt="Novčanica 11" class="novcanica" />
+            </div>
+            <div class="col-6">
+              <span class="spandesign">X</span>
+              <img
+                class="smanjiparu"
+                src="1.png"
+                alt="Novčanica 12"
+                class="novcanica"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="kasa.js"></script>
+  </body>
+</html>

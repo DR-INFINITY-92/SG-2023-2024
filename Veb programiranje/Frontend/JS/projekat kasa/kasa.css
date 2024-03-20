@@ -1,0 +1,48 @@
+.calculator {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin: auto;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.output {
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.novcanica {
+  width: 75%;
+  height: auto;
+  margin: 5px;
+  padding: 5px;
+  border: 3px dashed #fff; /* Dodajemo bele bordere oko novčanica i spanova */
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.smanjiparu {
+  height: 100px;
+  margin-bottom: 10px;
+  border: 3px dashed #fff; /* Dodajemo bele bordere oko novčanica i spanova */
+  display: inline-block;
+  padding: 2px;
+}
+.spandesign {
+  font-size: 20px;
+  color: #f2f2f2;
+  border: 3px dashed #fff; /* Dodajemo bele bordere oko novčanica i spanova */
+  display: inline-block;
+  padding: 5px;
+}
