@@ -1,21 +1,21 @@
 #include<stdio.h>
 #include<stdlib.h>
-void unos_elemenata_niza(int n,int a[n])
+void unos_elemenata_niza(int n,int t[n])
 {
     int i;
     for(i=0;i<n;i++)
     {
         printf(" unesi %d. element niza ",i+1);
-        scanf("%d",&a[i]);
+        scanf("%d",&t[i]);
     }
 }
 
-void ispis_elemenata_niza(int n,int a[n])
+void ispis_elemenata_niza(int n,int t[n])
 {
     int i;
     for(i=0;i<n;i++)
     {
-         printf(" %d ",a[i]);
+         printf(" %d ",t[i]);
     }
     printf("\n");
 }
