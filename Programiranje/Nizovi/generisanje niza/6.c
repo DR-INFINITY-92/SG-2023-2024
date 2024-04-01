@@ -30,20 +30,20 @@ void kreiraj_niz_b(int n,int m, int a[n],int b[m])
 {
     int i;
     for(i=0;i<m;i++)
-        b[i]=a[n-1-i]+a[i];
+        b[i]=a[i]+a[i+1];
 }
 int main()
 {
     int n;
     p:
     n=broj_elemenata_niza();
-    if(n%2!=0 || n<1)
+    if(n<1)
     {
         printf("los unos broja n unesi opet");
         goto p;
     }
     int m;
-    m=n/2;
+    m=n-1;
     int a[n],b[m];
     unos_elemenata_niza(n,a);
     kreiraj_niz_b(n,m,a,b);
