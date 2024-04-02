@@ -29,8 +29,8 @@ int broj_elemenata_niza()
 void kreiraj_niz_b(int n,int m, int a[n],int b[m])
 {
     int i;
-    for(i=0;i<m;i++)
-        b[i]=a[n-1-i]+a[i];
+    for(i=0;i<m;i++) /*na primer n=6 m=3   i=0,1,2;*/
+        b[i]=a[n-1-i]+a[i];  /*b0=a5+a0, b1=a4+a1 b2=a3+a2*? */
 }
 int main()
 {
@@ -39,7 +39,7 @@ int main()
     n=broj_elemenata_niza();
     if(n%2!=0 || n<1)
     {
-        printf("los unos broja n unesi opet");
+        printf("los unos broja n unesi opet\n");
         goto p;
     }
     int m;
